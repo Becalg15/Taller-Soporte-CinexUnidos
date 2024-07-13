@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es-Ve">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat de la Comunidad CinexUnidos</title>
+    <link rel="stylesheet" href="css/chat.css">
+
+    <script src="https://cinexunidos-production.up.railway.app/socket.io/socket.io.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <h2 class="menu-links">
+            <img src="https://cinexunidos-production.up.railway.app/assets/images/cinex-unidos.png" alt="Cinex Unidos">
+        </h2>
+        <nav class="menu">
+            <ul class="menu-links">
+                <li class="menu-item"><a href="#">Inicio</a></li>
+                <li class="menu-item"><a href="#">Contacto</a></li>
+                <li class="menu-item"><a href="#">Acerca de</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Chat de la Comunidad CinexUnidos</h1>
+    <div id="usernameForm">
+        <label for="usernameInput">Introduce tu nombre de usuario:</label>
+        <input type="text" id="usernameInput" required><br>
+        <br><button onclick="connectToChat()">Conectar</button>
+    </div>
+    <div id="chat" style="display: none;"></div>
+    <div id="message" style="display: none;">
+        <input type="text" id="messageInput" placeholder="Escribe tu mensaje...">
+        <button onclick="sendMessage()">Enviar</button>
+    </div>
+    <button id="disconnect-btn">Desconectar</button>
+    <footer>
+        <h3>Cinexunidos</h3>
+        <div>
+            <ul>
+                <li><a href="https://www.instagram.com/"> Instagram </a></li>
+                <li><a href="https://twitter.com/"> Twitter </a></li>
+                <li><a href="https://www.facebook.com/"> Facebook </a></li>
+            </ul>
+        </div>
+        <nav>
+            <a href="index.html">Inicio </a>
+            <a href="cartelera.html">Cartelera</a>
+        </nav>
+        <p>&copy; CopyRight 2024. Todos los derechos reservados.</p>
+
+    </footer>
+    <script src="js/chat.js"></script>
+</body>
+
+</html>

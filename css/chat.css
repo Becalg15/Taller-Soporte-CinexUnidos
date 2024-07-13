@@ -1,0 +1,359 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-image: linear-gradient(to top, rgba(103, 166, 239, 0.95) 0%, rgba(32, 91, 159, 0.95) 100%), url(https://wallpapers.com/images/high/minimalist-black-and-white-pattern-u1nlgbrj2q1g8p84.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0b1e60;
+    color: white;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+}
+
+header img {
+    width: 80px; /* Reducción del tamaño del logo */
+    height: auto;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+    font-size: 24px; /* Reducción del tamaño del título */
+}
+
+nav.menu {
+    margin-left: auto;
+}
+
+.menu-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu-item {
+    margin-left: 20px;
+}
+
+.menu-item a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px; /* Reducción del tamaño de los enlaces */
+}
+
+.menu-item a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #0b1e60;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: auto; /* Ensure footer is pushed to the bottom */
+}
+
+footer ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+footer ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+footer nav {
+    margin-top: 10px;
+}
+
+footer nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer nav a:hover {
+    text-decoration: underline;
+}
+
+p {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 12px; /* Reducción del tamaño del texto */
+}
+
+main {
+    flex: 1;
+}
+
+#chat {
+    display: flex;
+    flex-direction: column;
+    height: 40vh; /* Ajustado para reducir tamaño */
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #fff;
+    overflow-y: auto;
+    margin: 20px auto;
+    border-radius: 10px;
+    width: 90%; /* Reducción del ancho */
+    max-width: 400px; /* Limita el ancho máximo */
+}
+
+#message {
+    display: flex;
+    margin: 10px auto;
+    width: 90%; /* Reducción del ancho */
+    max-width: 400px;
+}
+
+#message input {
+    flex: 1;
+    padding: 8px; /* Reducción del padding */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#message button {
+    padding: 8px; /* Reducción del padding */
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    margin-left: 10px;
+    font-size: 14px; /* Reducción del tamaño del texto */
+}
+
+.message {
+    padding: 8px; /* Reducción del padding */
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+.incoming {
+    background-color: #f1f1f1;
+    align-self: flex-start;
+}
+
+.outgoing {
+    background-color: #e1ffc7;
+    align-self: flex-end;
+}
+
+#disconnect-btn {
+    display: block;
+    margin: 10px auto;
+    padding: 8px 16px; /* Reducción del padding */
+    border: none;
+    background-color: #d9534f;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px; /* Reducción del tamaño del texto */
+}
+
+/* Estilos para el formulario de nombre de usuario */
+#usernameForm {
+    text-align: center;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente */
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+#usernameForm input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 70%; /* Ancho del input */
+}
+
+#usernameForm button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#usernameForm button:hover {
+    background-color: #0056b3; /* Color del botón al pasar el mouse */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    header img {
+        margin-bottom: 10px;
+    }
+
+    .menu-links {
+        flex-direction: column; /* Los enlaces se apilan en pantallas pequeñas */
+    }
+
+    .menu-item {
+        margin-left: 0; /* Elimina el margen izquierdo en pantallas pequeñas */
+        margin-bottom: 10px; /* Espaciado entre elementos */
+    }
+
+    #chat {
+        width: 90%; /* Aumenta el ancho en pantallas pequeñas */
+    }
+
+    #usernameForm {
+        width: 90%; /* Ancho del formulario en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    #chat {
+        width: 100%; /* El ancho se adapta completamente a la pantalla */
+        margin: 10px;
+        height: 60vh; /* Ajuste en la altura */
+    }
+
+    #message {
+        width: 100%;
+    }
+
+    footer ul li {
+        display: block; /* Los elementos de la lista se apilan */
+        margin: 5px 0;
+    }
+
+    #usernameForm {
+        width: 95%; /* Ancho del formulario en pantallas muy pequeñas */
+    }
+
+    #usernameForm input,
+    #usernameForm button {
+        width: 100%; /* Ancho completo de los inputs y botones */
+        margin: 5px 0;
+    }
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    header img {
+        margin-bottom: 10px;
+    }
+
+    .menu-links {
+        flex-direction: column;
+    }
+
+    .menu-item {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    #chat {
+        width: 90%;
+    }
+
+    #message {
+        width: 90%;
+    }
+}
+
+@media (max-width: 600px) {
+    #chat {
+        height: 40vh;
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    #usernameForm input,
+    #usernameForm button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    #chat {
+        width: 100%;
+        margin: 10px auto;
+        height: 35vh;
+        max-width: 320px;
+    }
+
+    #message {
+        width: 100%;
+        max-width: 320px;
+        margin: 10px auto;
+    }
+
+    #disconnect-btn {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    footer ul li {
+        display: block;
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 360px) {
+    #chat {
+        height: 30vh;
+    }
+}
+
+
+
+
+
+
+
