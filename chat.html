@@ -18,12 +18,18 @@
         <nav class="menu">
             <ul class="menu-links">
                 <li class="menu-item"><a href="#">Inicio</a></li>
-                <li class="menu-item"><a href="#">Contacto</a></li>
-                <li class="menu-item"><a href="#">Acerca de</a></li>
+                <li class="menu-item"><a href="#">Cartelera</a></li>
+                <li class="menu-item"><a href="#">Comunidad</a></li>
             </ul>
         </nav>
     </header>
     <h1>Chat de la Comunidad CinexUnidos</h1>
+    <div id="chat-status" class="hidden">
+        <h3>Estado del chat:
+            <small id="status-online" class="hidden">online</small>
+            <small id="status-offline" class="hidden">offline</small>
+        </h3>
+    </div>
     <div id="usernameForm">
         <label for="usernameInput">Introduce tu nombre de usuario:</label>
         <input type="text" id="usernameInput" required><br>
@@ -34,7 +40,7 @@
         <input type="text" id="messageInput" placeholder="Escribe tu mensaje...">
         <button onclick="sendMessage()">Enviar</button>
     </div>
-    <button id="disconnect-btn">Desconectar</button>
+    <button id="disconnect-btn" style="display: none;">Desconectar</button>
     <footer>
         <h3>Cinexunidos</h3>
         <div>

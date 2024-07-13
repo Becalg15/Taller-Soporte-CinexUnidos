@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
     padding: 0;
@@ -32,7 +33,7 @@ header {
 }
 
 header img {
-    width: 80px; /* Reducción del tamaño del logo */
+    width: 80px;
     height: auto;
 }
 
@@ -40,7 +41,7 @@ h1 {
     text-align: center;
     color: white;
     margin-top: 20px;
-    font-size: 24px; /* Reducción del tamaño del título */
+    font-size: 24px;
 }
 
 nav.menu {
@@ -62,7 +63,7 @@ nav.menu {
 .menu-item a {
     color: white;
     text-decoration: none;
-    font-size: 14px; /* Reducción del tamaño de los enlaces */
+    font-size: 14px;
 }
 
 .menu-item a:hover {
@@ -74,7 +75,7 @@ footer {
     color: white;
     padding: 10px 0;
     text-align: center;
-    margin-top: auto; /* Ensure footer is pushed to the bottom */
+    margin-top: auto;
 }
 
 footer ul {
@@ -104,90 +105,107 @@ footer nav a:hover {
 p {
     text-align: center;
     margin-top: 10px;
-    font-size: 12px; /* Reducción del tamaño del texto */
+    font-size: 12px;
 }
 
 main {
     flex: 1;
 }
 
+.hidden {
+    display: none;
+}
+
+#status-online {
+    color: rgb(170, 239, 170);
+}
+
+#status-offline {
+    color: rgb(43, 43, 43);
+}
+
+#chat-status{
+    text-align: center;
+    color: #fff;
+}
+
 #chat {
     display: flex;
     flex-direction: column;
-    height: 40vh; /* Ajustado para reducir tamaño */
+    height: 40vh;
     border: 1px solid #ccc;
     padding: 10px;
     background-color: #fff;
     overflow-y: auto;
     margin: 20px auto;
     border-radius: 10px;
-    width: 90%; /* Reducción del ancho */
-    max-width: 400px; /* Limita el ancho máximo */
+    width: 90%;
+    max-width: 400px;
 }
 
 #message {
     display: flex;
     margin: 10px auto;
-    width: 90%; /* Reducción del ancho */
+    width: 90%;
     max-width: 400px;
 }
 
 #message input {
     flex: 1;
-    padding: 8px; /* Reducción del padding */
+    padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
 #message button {
-    padding: 8px; /* Reducción del padding */
+    padding: 8px;
     border: none;
     background-color: #007BFF;
     color: white;
     border-radius: 5px;
     margin-left: 10px;
-    font-size: 14px; /* Reducción del tamaño del texto */
+    font-size: 14px;
 }
 
 .message {
-    padding: 8px; /* Reducción del padding */
+    padding: 8px;
     margin: 5px 0;
-    border-radius: 5px;
 }
 
 .incoming {
-    background-color: #f1f1f1;
+    background-color: #d2d3d5;
     align-self: flex-start;
+    border-radius: 1.125rem 1.125rem 1.125rem 0;
 }
 
 .outgoing {
-    background-color: #e1ffc7;
+    background-color: #88c3fb;
     align-self: flex-end;
+    border-radius: 1.125rem 1.125rem 0 1.125rem;
 }
 
 #disconnect-btn {
     display: block;
     margin: 10px auto;
-    padding: 8px 16px; /* Reducción del padding */
+    padding: 8px 16px;
     border: none;
     background-color: #d9534f;
     color: white;
     border-radius: 5px;
-    font-size: 14px; /* Reducción del tamaño del texto */
+    font-size: 14px;
 }
 
-/* Estilos para el formulario de nombre de usuario */
 #usernameForm {
     text-align: center;
     margin-top: 20px;
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente */
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
     border-radius: 10px;
     width: 80%;
     max-width: 400px;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #usernameForm input {
@@ -195,7 +213,7 @@ main {
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-right: 10px;
-    width: 70%; /* Ancho del input */
+    width: 70%;
 }
 
 #usernameForm button {
@@ -208,10 +226,10 @@ main {
 }
 
 #usernameForm button:hover {
-    background-color: #0056b3; /* Color del botón al pasar el mouse */
+    background-color: #0056b3;
 }
 
-/* Media Queries for Responsiveness */
+
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -224,20 +242,20 @@ main {
     }
 
     .menu-links {
-        flex-direction: column; /* Los enlaces se apilan en pantallas pequeñas */
+        flex-direction: column;
     }
 
     .menu-item {
-        margin-left: 0; /* Elimina el margen izquierdo en pantallas pequeñas */
-        margin-bottom: 10px; /* Espaciado entre elementos */
+        margin-left: 0;
+        margin-bottom: 10px;
     }
 
     #chat {
-        width: 90%; /* Aumenta el ancho en pantallas pequeñas */
+        width: 90%;
     }
 
     #usernameForm {
-        width: 90%; /* Ancho del formulario en pantallas pequeñas */
+        width: 90%;
     }
 }
 
@@ -247,9 +265,9 @@ main {
     }
 
     #chat {
-        width: 100%; /* El ancho se adapta completamente a la pantalla */
+        width: 100%;
         margin: 10px;
-        height: 60vh; /* Ajuste en la altura */
+        height: 60vh;
     }
 
     #message {
@@ -257,23 +275,21 @@ main {
     }
 
     footer ul li {
-        display: block; /* Los elementos de la lista se apilan */
+        display: block;
         margin: 5px 0;
     }
 
     #usernameForm {
-        width: 95%; /* Ancho del formulario en pantallas muy pequeñas */
+        width: 95%;
     }
 
     #usernameForm input,
     #usernameForm button {
-        width: 100%; /* Ancho completo de los inputs y botones */
+        width: 100%;
         margin: 5px 0;
     }
 }
 
-
-/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -350,10 +366,3 @@ main {
         height: 30vh;
     }
 }
-
-
-
-
-
-
-
